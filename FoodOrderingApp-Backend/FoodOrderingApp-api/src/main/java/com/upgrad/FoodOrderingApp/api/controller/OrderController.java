@@ -90,7 +90,7 @@ public class OrderController {
             orderListCustomer.setContactNumber(ordersEntity1.getCustomerId().getContactNumber());
             orderList1.setCustomer(orderListCustomer);
 
-            orderListAddress.setId(ordersEntity1.getAddressId().getUuid());
+            orderListAddress.setId(UUID.fromString(ordersEntity1.getAddressId().getUuid()));
             orderListAddress.setFlatBuildingName(ordersEntity1.getAddressId().getFlatBuilNumber());
             orderListAddress.setLocality(ordersEntity1.getAddressId().getLocality());
             orderListAddress.setCity(ordersEntity1.getAddressId().getCity());

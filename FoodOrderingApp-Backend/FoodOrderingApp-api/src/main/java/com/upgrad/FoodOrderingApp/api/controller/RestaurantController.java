@@ -70,7 +70,7 @@ public class RestaurantController {
             addressListState.setStateName(restaurantEntity.getAddress().getState().getStateName());                 //Adding StateName to AddressListState Object
 
             RestaurantDetailsResponseAddress addressList = new RestaurantDetailsResponseAddress();
-            addressList.setId(restaurantEntity.getAddress().getUuid());                                             //Adding Id to AddressList Object
+            addressList.setId(UUID.fromString(restaurantEntity.getAddress().getUuid()));                                             //Adding Id to AddressList Object
             addressList.setFlatBuildingName(restaurantEntity.getAddress().getFlatBuilNumber());                     //Adding FlatBuildingName to AddressList Object
             addressList.setLocality(restaurantEntity.getAddress().getLocality());                                   //Adding Locality to AddressList Object
             addressList.setCity(restaurantEntity.getAddress().getCity());                                           //Adding City to AddressList Object
@@ -97,7 +97,7 @@ public class RestaurantController {
             restaurantDetailsResponseAddressState.setStateName(restaurantEntity.getAddress().getState().getStateName());                //Adding StateName to AddressListState Object
 
             RestaurantDetailsResponseAddress restaurantDetailsResponseAddress = new RestaurantDetailsResponseAddress();
-            restaurantDetailsResponseAddress.setId(restaurantEntity.getAddress().getUuid());                                            //Adding Id to RestaurantDetailsResponseAddress Object
+            restaurantDetailsResponseAddress.setId(UUID.fromString(restaurantEntity.getAddress().getUuid()));                                            //Adding Id to RestaurantDetailsResponseAddress Object
             restaurantDetailsResponseAddress.setFlatBuildingName(restaurantEntity.getAddress().getFlatBuilNumber());                    //Adding FlatBuildingNumber to RestaurantDetailsResponseAddress Object
             restaurantDetailsResponseAddress.setLocality(restaurantEntity.getAddress().getLocality());                                  //Adding Locality to RestaurantDetailsResponseAddress Object
             restaurantDetailsResponseAddress.setCity(restaurantEntity.getAddress().getCity());                                          //Adding City to RestaurantDetailsResponseAddress Object
@@ -147,7 +147,7 @@ public class RestaurantController {
             restaurantDetailsResponseAddressState.setStateName(restaurantEntity.getRestaurantId().getAddress().getState().getStateName());      //Adding StateName to RestaurantDetailsResponseAddressState Object
 
             RestaurantDetailsResponseAddress restaurantDetailsResponseAddress = new RestaurantDetailsResponseAddress();
-            restaurantDetailsResponseAddress.setId(restaurantEntity.getRestaurantId().getAddress().getUuid());                                  //Adding Id to restaurantDetailsResponseAddress Object
+            restaurantDetailsResponseAddress.setId(UUID.fromString(restaurantEntity.getRestaurantId().getAddress().getUuid()));                                  //Adding Id to restaurantDetailsResponseAddress Object
             restaurantDetailsResponseAddress.setFlatBuildingName(restaurantEntity.getRestaurantId().getAddress().getFlatBuilNumber());          //Adding FlatBuildingName to restaurantDetailsResponseAddress Object
             restaurantDetailsResponseAddress.setLocality(restaurantEntity.getRestaurantId().getAddress().getLocality());                        //Adding Locality to restaurantDetailsResponseAddress Object
             restaurantDetailsResponseAddress.setCity(restaurantEntity.getRestaurantId().getAddress().getCity());                                //Adding City to restaurantDetailsResponseAddress Object
@@ -196,7 +196,7 @@ public class RestaurantController {
         restaurantDetailsResponseAddressState.setStateName(restaurantEntity.getAddress().getState().getStateName());
 
         RestaurantDetailsResponseAddress restaurantDetailsResponseAddress = new RestaurantDetailsResponseAddress();
-        restaurantDetailsResponseAddress.setId(restaurantEntity.getAddress().getUuid());
+        restaurantDetailsResponseAddress.setId(UUID.fromString(restaurantEntity.getAddress().getUuid()));
         restaurantDetailsResponseAddress.setFlatBuildingName(restaurantEntity.getAddress().getFlatBuilNumber());
         restaurantDetailsResponseAddress.setLocality(restaurantEntity.getAddress().getLocality());
         restaurantDetailsResponseAddress.setCity(restaurantEntity.getAddress().getCity());

@@ -42,7 +42,7 @@ public class AddressController {
 
         AddressEntity addressEntity = new AddressEntity();
 
-        addressEntity.setUuid(UUID.randomUUID());
+        addressEntity.setUuid(UUID.randomUUID().toString());
         addressEntity.setFlatBuilNumber(saveAddressRequest.getFlatBuildingName());
         addressEntity.setLocality(saveAddressRequest.getLocality());
         addressEntity.setCity(saveAddressRequest.getCity());
@@ -82,7 +82,7 @@ public class AddressController {
 
             AddressList addressList = new AddressList();
 
-            addressList.setId(addressEntity.getUuid());
+            addressList.setId(UUID.fromString(addressEntity.getUuid()));
             addressList.setFlatBuildingName(addressEntity.getFlatBuilNumber());
             addressEntity.setLocality(addressEntity.getLocality());
             addressEntity.setCity(addressEntity.getCity());
@@ -115,7 +115,7 @@ public class AddressController {
 
        AddressEntity deleteAddressEntity = addressBusinessService.deleteAddress(address_id , authorization);
 
-       DeleteAddressResponse deleteAddressResponse = new DeleteAddressResponse().id(deleteAddressEntity.getUuid()).status("ADDRESS DELETED SUCCESSFULLY");
+       DeleteAddressResponse deleteAddressResponse = new DeleteAddressResponse().id(UUID.fromString(deleteAddressEntity.getUuid())).status("ADDRESS DELETED SUCCESSFULLY");
        return new ResponseEntity<DeleteAddressResponse>(deleteAddressResponse , HttpStatus.OK);
    }
 
